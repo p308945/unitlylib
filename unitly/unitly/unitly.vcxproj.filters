@@ -15,19 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="unitly.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="hy_windows.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <ClInclude Include="common\stdhy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="database\hyDatabase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\hywindows.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\sqlite3\sqlite3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third\sqlite3\sqlite3ext.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="hy_windows.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="stdhy.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
+    <ClCompile Include="main\unitly.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="windows\hywindows.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="database\hyDatabase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\sqlite3\shell.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third\sqlite3\sqlite3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

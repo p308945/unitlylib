@@ -10,6 +10,20 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\stdhy.h" />
+    <ClInclude Include="database\hyDatabase.h" />
+    <ClInclude Include="third\sqlite3\sqlite3.h" />
+    <ClInclude Include="third\sqlite3\sqlite3ext.h" />
+    <ClInclude Include="windows\hywindows.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="database\hyDatabase.cpp" />
+    <ClCompile Include="main\unitly.cpp" />
+    <ClCompile Include="third\sqlite3\shell.c" />
+    <ClCompile Include="third\sqlite3\sqlite3.c" />
+    <ClCompile Include="windows\hywindows.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C33664CC-849A-4D94-B9E2-522759FBAB59}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -41,9 +55,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\test\unitlylib\unitly\unitly\common;E:\test\unitlylib\unitly\unitly\windows;E:\test\unitlylib\unitly\unitly\third\sqlite3;</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);E:\test\unitlylib\unitly\unitly\common;E:\test\unitlylib\unitly\unitly\windows;E:\test\unitlylib\unitly\unitly\third\sqlite3;</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -77,14 +93,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="hy_windows.cpp" />
-    <ClCompile Include="unitly.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="hy_windows.h" />
-    <ClInclude Include="stdhy.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
